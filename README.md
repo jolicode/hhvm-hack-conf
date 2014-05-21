@@ -1,4 +1,4 @@
-# 42 Protips 2014
+# HHVM et "Hack", prenez 2 versions d'avance sur PHP
 
 
 ## Generating a PDF
