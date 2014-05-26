@@ -83,6 +83,7 @@
 
 	<section class="slide"><div>
 		<li>Beaucoup de glandeurs... d'utilisateurs :)</li>
+		<img src="pictures/fb-dailyuse.png" />
 		<li>== Problème de performances, et scalabilité</li>
 		<li>400 billion PHP-based page views every month.</li>
 	</div></section>
@@ -103,9 +104,16 @@
 		<li class="next">Compilateur, ou plutôt Source Code Transformer</li>
 		<li class="next">PHP -> C++, puis compilation g++</li>
 		<li class="next">Pleins d'alternatives possibles, Quercus: PHP -> Java, PHC: PHP -> C, Phalanger : PHP -> .Net TROLOLOL</li>
-		<li class="next">90% du site était en HipHop</li>
+	</div></section>
+
+	<section class="slide"><div>
+		<li>90% du site était en HipHop</li>
 		<li class="next">Jusqu'a 50% de CPU en moins</li>
 		<li class="next">Deploiement d'un executable</li>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/fb-hiphop-schema.png" />
 	</div></section>
 
 	<section class="slide"><div>
@@ -146,6 +154,7 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<li>Zephir</li>
 		<li>PHP NG</li>
 	</div></section>
 
@@ -156,8 +165,23 @@
 	<section class="slide"><div>
 		<li>Il suffit de chercher "HACK Facebook" sur un moteur de recherche</li>
 		<li>Dispo dans HHVM</li>
-		<li>Surlanguage de PHP</li>
+		<li>Langage de programmation</li>
 		<li>Fonctionne très bien en parallèle de PHP</li>
+	</div></section>
+
+	<section class="slide"><div>
+		<li>En fait Facebook a commencé à changer PHP bien avant !</li>
+		<li>XHP !</li>
+		<li>Extension PHP qui augmente la syntaxe du langage</li>
+		<li>Exemple : </li>
+		<code>&lt;?php<br/>
+		$href = 'http://www.facebook.com';<br/>
+		echo &lt;a href={$href}&gt;Facebook&lt;/a&gt;;</code>
+	</div></section>
+
+	<section class="slide"><div>
+		<li>Exemple : </li>
+		<code>&lt;?hh<br/></code>
 	</div></section>
 
 	<section class="slide"><div>
