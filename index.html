@@ -23,9 +23,9 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Coucou, je suis Benjamin</h2>
+		<h2>Coucou, je suis Benjamin Clay</h2>
 		<ul style="margin-bottom: 25px">
-			<li>Expert Web et mobile @ <a href="http://jolicode.com">JoliCode</a></li>
+			<li>Expert Web et mobile @ <a href="http://jolicode.com"><img src="pictures/logo.svg" style="height:1em; vertical-align: text-bottom;"></a>, et éleveur de licornes.</li>
 		</ul>
 		<p><img src="pictures/twitter.png" style="width: 20px"> <a href="https://twitter.com/ternel">@ternel</a></p>
 		<h2>Coucou, je suis Mathieu</h2>
@@ -35,16 +35,21 @@
 		<p><img src="pictures/twitter.png" style="width: 20px"> <a href="https://twitter.com/mdarse">@mdarse</a></p>
 	</div></section>
 
-	<section class="slide cover"><div>
-		<h2>PHP, ça sent le popo.</h2>
-
+	<section class="slide"><div>
+		<h2>Parlons de PHP.</h2>
 	</div></section>
 
 	<section class="slide"><div>
-		<img src="pictures/php-logo.jpeg" alt="" /> === <img src="pictures/popo.gif" alt="" />
+		<h3>PHP a de bons cotés :</h3>
+		<ul>
+			<li class="next">C'est facile</li>
+			<li class="next">C'est disponible partout</li>
+			<li class="next">Belles choses à faire avec ? :p</li>
+		</ul>
 	</div></section>
 
 	<section class="slide"><div>
+		<h3>Des points négatifs :</h3>
 		<ul>
 			<li class="next">"Inconsistent haystack / needle"</li>
 			<li class="next">PHP is a HTML file, with logic</li>
@@ -56,15 +61,25 @@
 		</ul>
 	</div></section>
 
-
 	<section class="slide"><div>
-		<p>Donc... ce n'est pas si moisi qu'on le dit.</p>
+		<img src="pictures/php-logo.jpeg" width="50%" alt="" /> == <img src="pictures/popo.gif" alt="" />
 	</div></section>
 
 	<section class="slide"><div>
-		<li>Tout n'est pas rose non plus...</li>
-		<li>Y'a aussi de la merde.</li>
-		<li class="next">La communauté par exemple Trollface</li>
+		<img src="pictures/ie3.jpg" width="50%" /><img src="pictures/ie55.jpg" width="50%" />
+		<h2 class="next">Vous vous souvenez d'Internet Explorer ?</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/php-logo.jpeg" alt="" width="50%" /> == <img src="pictures/ie.jpg" width="40%" alt="" />
+	</div></section>
+
+	<section class="slide"><div>
+		<p>
+			Parfait pour un projet rapide, fait le soir dans une chambre d'étudiant.
+			<img src="covers/fb-etudiant.jpg" alt="" class="next" />
+			<span class="next">TheFacebook</span>
+		</p>
 	</div></section>
 
 	<section class="slide cover"><div>
@@ -73,19 +88,16 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<p>
-			Créé dans une chambre d'étudiant
-			<img src="covers/fb-etudiant.jpg" alt="" />
-			avec un langage rapide et simple...
-			<img src="pictures/php-logo.jpeg" alt="" class="next" />
-		</p>
+		<li>Faites un site qui permet de glander au bureau... et :</li>
+		<img src="pictures/fb-dailyuse.png" />
 	</div></section>
 
 	<section class="slide"><div>
-		<li>Beaucoup de glandeurs... d'utilisateurs :)</li>
-		<img src="pictures/fb-dailyuse.png" />
-		<li>== Problème de performances, et scalabilité</li>
-		<li>400 billion PHP-based page views every month.</li>
+		<ul>
+			<li>== Problème de performances, et scalabilité</li>
+			<li>20 millions de lignes de PHP (0,02 Facebook Unit)</li>
+			<li>400 billion PHP-based page views every month. (400 Facebook Unit)</li>
+		</ul>
 	</div></section>
 
 	<section class="slide"><div>
@@ -125,6 +137,7 @@
 
 	<section class="slide cover"><div>
 		<h2>HHVM</h2>
+		<img src="covers/fb-servers.jpg" alt="" />
 	</div></section>
 
 	<section class="slide"><div>
@@ -135,18 +148,46 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<li>JIT</li>
-		<li>Explication JIT</li>
+		<ul>
+			<li>CLI + FastCGI</li>
+			<li>64bits</li>
+			<li>Code machine caché en sqlite</li>
+			<li>JIT</li>
+			<li>Explication JIT</li>
+		</ul>
 	</div></section>
 
 	<section class="slide"><div>
 		<li>Release Open Source !</li>
-		<li>Calendrier de releases</li>
+		<li>Calendrier de releases : toutes les 2 semaines en interne / toutes les 8 semaines / nightly</li>
 		<li>Tente d'être compatible avec un maximum de projets</li>
 	</div></section>
 
 	<section class="slide"><div>
+		<ul>
+			<li>Compatibilité : Laravel, Twig, Drupal, ...</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li>Extensions dynamiques - comme PHP</li>
+			<li>Peuvent être écrite en PHP, Hack ou C++, et même en combinant des langages</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li>Linux: repo Debian, Ubuntu, Fedora...</li>
+			<li>MacOSX : Homebrew</li>
+			<li>Windows: AHAH.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
 		<li>Benchmarks</li>
+		<img src="pictures/benchmarks.jpg" />
+		<li>Premières request servent à chauffer la bête ! - http://stackoverflow.com/questions/17898783/hhvm-poor-performance</li>
 	</div></section>
 
 	<section class="slide cover"><div>
@@ -164,9 +205,14 @@
 
 	<section class="slide"><div>
 		<li>Il suffit de chercher "HACK Facebook" sur un moteur de recherche</li>
+		<li class="next">Comme pour le Go de Google, avec #golang, utilisez #hacklang ;)</li>
+	</div></section>
+
+	<section class="slide"><div>
 		<li>Dispo dans HHVM</li>
-		<li>Langage de programmation</li>
+		<li>Écrit en OCaml</li>
 		<li>Fonctionne très bien en parallèle de PHP</li>
+		<li>Partial / strict (tout doit être typé, pas d'appel a du code non hack) / decl (code non-strict appelable) / unsafe (pas de type-checking)</li>
 	</div></section>
 
 	<section class="slide"><div>
@@ -180,25 +226,110 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>Rappel !</h2>
+		<p>PHP est dynamiquement typé</p>
+		<p class="next"> -> Flexibilité, mais aussi erreurs possibles !</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Type hinting</h2>
+		<p>Return type hinting</p>
+		<p>Propriétés de classe</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<li>Daemon type-checker : sur le poste du dev, programme qui watch le code source</li>
+		<li>A la modification d'un fichier, il y a comparaison avec l'ancien fichier, et re-calcule si besoin</li>
+		<li>method by method === rapidité !</li>
+		<li>Configuration via .hhconfig</li>
+		<li>hh_client pour voir l'état</li>
+	</div></section>
+
+	<section class="slide"><div>
+		<li>Type de retour des fonctions / méthodes</li>
+		<li>Type nullable: <code>?type</code></li>
+		<li>Types disponibles: <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code>, <code>MyClass</code>, <code>Vector<type></code>, <code>this</code>, <code>mixed</code>, <code>void</code></li>
+		<li><code>?int</code>, <code>array</code>, <code>array<int></code>, <code>array<MyClass></code>, <code>array<int, MyClass></code></li>
+	</div></section>
+
+	<section class="slide"><div>
 		<li>Exemple : </li>
 		<code>&lt;?hh<br/></code>
 	</div></section>
 
 	<section class="slide"><div>
+		<li>No templating</li>
 		<li>Type annotations</li>
 		<li>Generics</li>
 		<li>Collections</li>
 		<li>Nullable Types</li>
+		<li>Fonction asynchrone</li>
+	</div></section>
+
+	<section class="slide"><div>
+		<p>Pas de <code>?></code></p>
+		<p>On ne mélange pas HTML et Hack.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Generics</h2>
+		<li>Type de classe variable</li>
+		<li>Analyse statique du code</li>
+		<li><code>MyClass<int></code> != <code>MyClass<string></code></li>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Collections</h2>
+		<li>Vector : Liste ordonnée de valeur du même type</li>
+		<code>$vector = Vector{'pony', 'unicorn'};</code>
+		<li>Map : Valeurs de même type, clés = string ou int</li>
+		<code>$map = Map{'pony' => 5, 'unicorn' = 42};</code>
+		<li>Set : Liste d'int ou string</li>
+		<code>$set = Set{'pony', 'unicorn'};</code>
+		<li>Pair : Pair de valuer de n'importe quel type, immutable</li>
+		<code>$pair = Pair{'jolicode', 42};</code>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Lambda</h2>
+		<li>Binding de variable automatique</li>
+		<li>Syntaxe plus courte</li>
+		<li><code>==></code></li>
+	</div></section>>
+
+	<section class="slide"><div>
+		<h2>Async</h2>
+		<li>Paralléliser les tâches</li>
+		<li><code>async</code> et <code>await</code> keywords</li>
+		<li>Early stage</li>
 	</div></section>
 
 	<section class="slide"><div>
 		<li>Exemple</li>
+		<li>Tuple</li>
+	</div></section>
+
+	<section class="slide"><div>
+		<li>Non supporté dans Hack</li>
+		<li><code>goto</code>, <code>if ... endif;</code>, <code>break N, continue N</code>, variables globales</li>
+		<li>http://docs.hhvm.com/manual/en/hack.unsupported.php</li>
+	</div></section>
+
+	<section class="slide"><div>
+		<li>Ça ne vous dit rien ?</li>
+		<ul class="next">
+			<li>https://wiki.php.net/rfc/returntypehinting</li>
+			<li>https://wiki.php.net/rfc/constructor-promotion</li>
+			<li>https://wiki.php.net/rfc/consistent-names</li>
+			<li>http://www.php-cpp.com/</li>
+		</ul>
 	</div></section>
 
 	<section class="slide"><div>
 		<li>Faut-il l'utiliser ?</li>
+		<li>Hack is designed by Facebook for Facebook</li>
+		<li>HHVM reste un runtime PHP ! Hack vient en plus seulement.</li>
 	</div></section>
-
 
 	<section class="slide cover" id="end"><div>
 		<h2>
