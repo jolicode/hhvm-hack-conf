@@ -38,6 +38,14 @@ img {
     max-width: 100%;
 }
 
+img.middle {
+    vertical-align: bottom;
+}
+
+.biggest {
+    font-size: 4em;
+}
+
 .full .progress {
     background-color: #fff;
     height: 30px;
