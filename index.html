@@ -18,7 +18,7 @@
 	<section class="slide cover" id="coverpage"><div>
 		<div class="covertitle">
 			<h2>HHVM et "Hack", prenez 2 versions d'avance sur PHP</h2>
-			<p>PHP Tour Lyon- <a href="http://ternel.net/">Benjamin Clay</a> && Mathieu Darse - <span class="date">Juin 2014</span></p>
+			<p>PHP Tour Lyon - Benjamin Clay && Mathieu Darse - <span class="date">Juin 2014</span></p>
 		</div>
 	</div></section>
 
@@ -264,7 +264,13 @@
 			<li>Dispo dans HHVM</li>
 			<li>Écrit en OCaml</li>
 			<li>Fonctionne très bien en parallèle de PHP</li>
-			<li>Partial / strict (tout doit être typé, pas d'appel a du code non hack) / decl (code non-strict appelable) / unsafe (pas de type-checking)</li>
+			<li>Modes :
+			<ul>
+				<li>Partial</li>
+				<li>Strict : tout doit être typé, pas d'appel à du code non-hack</li>
+				<li>Decl : code non-strict appelable</li>
+				<li>Unsafe : pas de type-checking</li>
+			</ul></li>
 		</ul>
 	</div></section>
 
@@ -284,12 +290,11 @@
 	<section class="slide"><div>
 		<h2>Fonctionnalités</h2>
 		<ul>
-			<li>No templating</li>
+			<li>No templating - <code>?></code> non disponible</li>
 			<li>Type annotations</li>
 			<li>Generics</li>
 			<li>Collections</li>
-			<li>Nullable Types</li>
-			<li>Fonction asynchrone</li>
+			<li>Fonctions asynchrones</li>
 		</ul>
 	</div></section>
 
@@ -333,6 +338,8 @@
 	<section class="slide"><div>
 		<p>Pas de <code>?></code></p>
 		<p>On ne mélange pas HTML et Hack.</p>
+		<p>hackificator // hh_server ༼ つ ◕_◕ ༽つ</p>
+		<p>hh_server: 1/2 journée + 10Go de RAM - 10 millions de lignes de codes</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -374,25 +381,32 @@
 
 	<section class="slide"><div>
 		<li>Exemple</li>
+		<pre><code class="language-php">&lt;?hh
+
+function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
+  // Example of lambda expressions.
+  return $v->map($x ==> $x + 1);
+}
+</code></pre>
 		<li>Tuple</li>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Non supporté dans Hack</h2>
-		<p><code>goto</code>, <code>if ... endif;</code>, <code>break N, continue N</code>, variables globales, ...</p>
+		<h2>Non supportés dans Hack</h2>
+		<p><code>goto</code>, <code>if ... endif;</code>, <code>break N</code>, <code>continue N</code>, variables globales, ...</p>
 		<li>http://docs.hhvm.com/manual/en/hack.unsupported.php</li>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Faut-il l'utiliser ?</h2>
 		<ul>
-			<li>Hack is designed by Facebook for Facebook</li>
-			<li>HHVM reste un runtime PHP ! Hack vient en plus seulement.</li>
+			<li>Hack a été créé par <img src="pictures/facebook.jpg" style="height:1.5em; vertical-align: text-bottom;" alt="Facebook"><span class="next"> pour <img src="pictures/facebook.jpg" style="height:1.5em; vertical-align: text-bottom;" alt="Facebook"></span></li>
+			<li>HHVM reste un runtime PHP ! Hack vient en plus.</li>
 		</ul>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Hack, va déchainer les développeurs ?</h2>
+		<h2>Hack va déchainer les développeurs ?</h2>
 		<ul class="next">
 			<li>https://wiki.php.net/rfc/returntypehinting</li>
 			<li>https://wiki.php.net/rfc/constructor-promotion</li>
