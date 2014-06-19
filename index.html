@@ -47,10 +47,10 @@
 	<section class="slide"><div>
 		<h2>PHP a de bons côtés</h2>
 		<ul>
-			<li class="next">C'est facile</li>
-			<li class="next">Rapide à apprendre</li>
-			<li class="next">Disponible pratiquement partout, et souvent très facilement</li>
-			<li class="next">Belles choses à faire avec ? :)</li>
+			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> C'est facile</li>
+			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Rapide à apprendre</li>
+			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Disponible pratiquement partout, et souvent très facilement</li>
+			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Belles choses à faire avec ? :)</li>
 		</ul>
 		<img src="pictures/urkel.jpg" alt="" class="next"/>
 	</div></section>
@@ -58,13 +58,13 @@
 	<section class="slide"><div>
 		<h2>Des points négatifs</h2>
 		<ul>
-			<li class="next">"Inconsistent haystack / needle"</li>
-			<li class="next">PHP is a HTML file, with logic</li>
-			<li class="next">No standards</li>
-			<li class="next">Lack of Quality Packages</li>
-			<li class="next">Misconception</li>
-			<li class="next">You were doing it wrong</li>
-			<li class="next">Elitism</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> "Inconsistent haystack / needle"</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> PHP is a HTML file, with logic</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> No standards</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Lack of Quality Packages</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Misconception</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> You were doing it wrong</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Elitism</li>
 		</ul>
 	</div></section>
 
@@ -83,10 +83,10 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<p>Parfait pour un projet rapide, fait le soir dans une chambre d'étudiant.</p>
+		<li>Parfait pour un projet rapide, fait le soir dans une chambre d'étudiant.</li>
 		<div class="next">
 			<img src="covers/fb-etudiant.jpg" alt="" />
-			<div><h2 style="display: inline;">TheFacebook.com</h2> (avec Spiderman <img src="pictures/spiderman.jpg" />)</div>
+			<div><h2 style="display: inline;">TheFacebook.com</h2> <span style="font-size: 0.5em;">(avec Spiderman <img src="pictures/spiderman.jpg"  style="height: 2em;" />)<span></div>
 		</div>
 	</div></section>
 
@@ -146,18 +146,9 @@
 				<ul>
 					<li>Quercus: PHP -> Java</li>
 					<li>PHC: PHP -> C</li>
-					<li>Phalanger : PHP -> .Net <img src="pictures/trollface.png" style="vertical-align: middle;" /></li>
+					<li>Phalanger : PHP -> .Net <img src="pictures/trollface.png" style="vertical-align: middle;" class="next" /></li>
 				</ul>
 			</li>
-		</ul>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>HipHop for PHP</h2>
-		<ul>
-			<li>90% du site était en HipHop</li>
-			<li>Jusqu'a 50% de CPU Usage en moins</li>
-			<li>Déploiement d'un exécutable</li>
 		</ul>
 	</div></section>
 
@@ -168,10 +159,12 @@
 	<section class="slide"><div>
 		<h2>HipHop for PHP</h2>
 		<ul>
-			<li>Fuck YEAH, ça à l'air cool</li>
-			<li>Mais bof en fait</li>
-			<li>PHP 5.2, et pas complètement</li>
-			<li>ie. non utilisable</li>
+			<li>90% du site était en HipHop</li>
+			<li>Jusqu'a 50% de CPU Usage en moins</li>
+			<li>Déploiement d'un exécutable</li>
+		</ul>
+		<ul class="next">
+			<li>Pas vraiment utilisable pour nous !</li>
 		</ul>
 	</div></section>
 
@@ -231,8 +224,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<li>Benchmarks</li>
-		<img src="pictures/benchmarks.jpg" />
+		<h2>Benchmarks</h2>
 		<li>Premières requests servent à chauffer la bête ! - http://stackoverflow.com/questions/17898783/hhvm-poor-performance</li>
 	</div></section>
 
@@ -250,16 +242,17 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>Hack ?</h2>
 		<ul>
-		<li>Il suffit de chercher "HACK Facebook" sur un moteur de recherche<br />
-			<img src="pictures/hack-fb-1.png" /> <img src="pictures/hack-fb-2.png" />
-
-		</li>
-		<li class="next">Comme pour le Go de Google, avec <code>#golang</code>, utilisez <code>#hacklang</code> ;)</li>
+			<li>Il suffit de chercher "HACK Facebook" sur un moteur de recherche<br />
+				<img src="pictures/hack-fb-1.png" style="height:8em; vertical-align: text-bottom;" /> <img src="pictures/hack-fb-2.png" style="height:8em; vertical-align: text-bottom;" />
+			</li>
+			<li class="next">Comme pour le Go de Google avec <code>#golang</code>, utilisez <code>#hacklang</code> ;)</li>
 		</ul>
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>Hack !</h2>
 		<ul>
 			<li>Dispo dans HHVM</li>
 			<li>Écrit en OCaml</li>
@@ -309,12 +302,6 @@
 
 	<section class="slide"><div>
 		<h2>Type hinting</h2>
-		<p>Return type hinting</p>
-		<p>Propriétés de classe</p>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Type hinting</h2>
 		<li>Daemon type-checker : sur le poste du dev, programme qui watch le code source</li>
 		<li>A la modification d'un fichier, il y a comparaison avec l'ancien fichier, et re-calcule si besoin</li>
 		<li>method by method === rapidité !</li>
@@ -328,18 +315,6 @@
 		<li>Type nullable: <code>?type</code></li>
 		<li>Types disponibles: <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code>, <code>MyClass</code>, <code>Vector&lt;type&gt;</code>, <code>this</code>, <code>mixed</code>, <code>void</code></li>
 		<li><code>?int</code>, <code>array</code>, <code>array&lt;int&gt;</code>, <code>array&lt;MyClass&gt;</code>, <code>array&lt;int, MyClass&gt;</code></li>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Exemple : </h2>
-		<code>&lt;?hh<br/></code>
-	</div></section>
-
-	<section class="slide"><div>
-		<p>Pas de <code>?></code></p>
-		<p>On ne mélange pas HTML et Hack.</p>
-		<p>hackificator // hh_server ༼ つ ◕_◕ ༽つ</p>
-		<p>hh_server: 1/2 journée + 10Go de RAM - 10 millions de lignes de codes</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -388,7 +363,6 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
   return $v->map($x ==> $x + 1);
 }
 </code></pre>
-		<li>Tuple</li>
 	</div></section>
 
 	<section class="slide"><div>
@@ -398,10 +372,75 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>Exemple</h2>
+		<p>Pas de <code>?></code></p>
+		<p>On ne mélange pas HTML et Hack.</p>
+		<p>hackificator // hh_server ༼ つ ◕_◕ ༽つ</p>
+		<p>hh_server: 1/2 journée + 10Go de RAM - 10 millions de lignes de codes</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Blur</h2>
+		<img src="pictures/blur.jpg" style="height: 11em;" />
+		<img src="pictures/blur-4players.jpg" style="height: 11em;" />
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>JoliBlur</h2>
+		<ul>
+			<li>Silex + Doctrine2</li>
+			<li>MySQL</li>
+			<li>Très simple, coder à la va vite</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Migration</h2>
+		<ul>
+			<li>Lancement de hackificator</li>
+			<li>Lancement de hh_server convert</li>
+			<li>Modification du code à la main</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Benchmarks</h2>
+		<img src="pictures/benchmarks.jpg" />
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Benchmarks</h2>
+		<h3>Req/s</h3>
+		<table>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">PHP 5.5</th>
+				<th scope="col">PHP 5.5 + opcache</th>
+				<th scope="col">HHVM</th>
+				<th scope="col">HHVM + Hack</th>
+			</tr>
+			<tr class="next">
+				<th scope="row">Concurrence = 1</th>
+				<td>8</td>
+				<td>20</td>
+				<td>23</td>
+				<td>26</td>
+			</tr>
+			<tr class="next">
+				<th scope="row">Concurrence = 100</th>
+				<td>35</td>
+				<td>70</td>
+				<td>78</td>
+				<td>146</td>
+			</tr>
+		</table>
+	</div></section>
+
+	<section class="slide"><div>
 		<h2>Faut-il l'utiliser ?</h2>
 		<ul>
-			<li>Hack a été créé par <img src="pictures/facebook.jpg" style="height:1.5em; vertical-align: text-bottom;" alt="Facebook"><span class="next"> pour <img src="pictures/facebook.jpg" style="height:1.5em; vertical-align: text-bottom;" alt="Facebook"></span></li>
 			<li>HHVM reste un runtime PHP ! Hack vient en plus.</li>
+			<li>Hack a été créé par <img src="pictures/facebook.jpg" style="height:1.5em; vertical-align: text-bottom;" alt="Facebook"><span class="next"> pour <img src="pictures/facebook.jpg" style="height:1.5em; vertical-align: text-bottom;" alt="Facebook"></span></li>
 		</ul>
 	</div></section>
 
@@ -421,6 +460,25 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 			<a href="http://jolicode.com">http://jolicode.com</a>
 		</h2>
 	</div></section>
+
+	<section class="slide"><div>
+		<li>https://jolicode.github.io/2014-hhvm-conf</li>
+		<pre><code class="language-php">&lt;?hh
+function getAnswer(Speaker $speaker, Vector&lt;Question&gt; $questions)
+:?Answer
+{
+	foreach ($questions as $question) {
+		if ($speaker->canAnswer($question)) {
+			return $speaker->giveAnswer($question);
+		} else {
+			// OMG, $speaker->getName(), YOU SUCK!
+			return null;
+		}
+	}
+}
+</code></pre>
+	</div></section>
+
 
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
