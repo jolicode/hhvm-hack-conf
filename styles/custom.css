@@ -42,6 +42,22 @@ img.middle {
     vertical-align: bottom;
 }
 
+.slide ul.yesno li {
+    text-indent: -3em;
+}
+
+.slide ul.yesno li:before {
+    content: '';
+}
+
+blockquote {
+    text-indent: 3em;
+}
+
+.slide blockquote:before {
+    margin-left: -150px;
+}
+
 .biggest {
     font-size: 4em;
 }

@@ -36,7 +36,7 @@
 	</div></section>
 
 	<section class="slide cover"><div>
-		<img src="covers/jolicode-bg.jpg" alt="" />
+		<img src="covers/jolicode-bg.jpg" alt="" style="margin-top: 1em;" />
 	</div></section>
 
 	<section class="slide"><div>
@@ -46,25 +46,27 @@
 
 	<section class="slide"><div>
 		<h2>PHP a de bons côtés</h2>
-		<ul>
-			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> C'est facile</li>
-			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Rapide à apprendre</li>
-			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Disponible pratiquement partout, et souvent très facilement</li>
-			<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Belles choses à faire avec ? :)</li>
-		</ul>
-		<img src="pictures/urkel.jpg" alt="" class="next"/>
+		<div style="float: left; width: 50%;">
+			<ul class="yesno">
+				<li class="next"><img src="pictures/yes.png" class="check" alt="" /> C'est facile</li>
+				<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Rapide à apprendre</li>
+				<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Disponible pratiquement partout, et souvent très facilement</li>
+				<li class="next"><img src="pictures/yes.png" class="check" alt="" /> Belles choses à faire avec ? :)</li>
+			</ul>
+		</div>
+		<div style="float: right; width: 50%;">
+			<img src="pictures/urkel.jpg" alt="" />
+		</div>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Des points négatifs</h2>
-		<ul>
-			<li class="next"><img src="pictures/no.png" class="check" alt="" /> "Inconsistent haystack / needle"</li>
-			<li class="next"><img src="pictures/no.png" class="check" alt="" /> PHP is a HTML file, with logic</li>
-			<li class="next"><img src="pictures/no.png" class="check" alt="" /> No standards</li>
-			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Lack of Quality Packages</li>
-			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Misconception</li>
-			<li class="next"><img src="pictures/no.png" class="check" alt="" /> You were doing it wrong</li>
-			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Elitism</li>
+		<ul class="yesno">
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Inconsistances "haystack / needle"</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> PHP c'est de l'HTML avec de la logique</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Pas de standards</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Pas de librairies de qualité</li>
+			<li class="next"><img src="pictures/no.png" class="check" alt="" /> Des erreurs de conception</li>
 		</ul>
 	</div></section>
 
@@ -74,12 +76,15 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>Vous vous souvenez d'Internet Explorer ?</h2>
 		<img src="pictures/ie3.jpg" width="50%" /><img src="pictures/ie55.jpg" width="50%" />
-		<h2 class="next">Vous vous souvenez d'Internet Explorer ?</h2>
 	</div></section>
 
 	<section class="slide"><div>
+	<br />
 		<img src="pictures/php-logo.jpeg" alt="" width="45%" class="middle" /><span class="biggest">&nbsp;==&nbsp;</span><img src="pictures/ie.jpg" width="35%" alt="" class="middle" style="margin-bottom: 35px" />
+
+		<p class="note">Bien mieux que Safari ;)</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -103,17 +108,17 @@
 	<section class="slide"><div>
 		<h2>Les problèmes commencent...</h2>
 		<ul>
-			<li><strong>400 milliards de pages vues par mois</strong> propulsées par PHP, soit 400 Facebook Unit</li>
-			<li>== Problèmes de performances, et scalabilité</li>
+			<li><strong>400 milliards de pages vues par mois</strong> propulsées par PHP</li>
+			<li>Autrement dit : Problèmes de performances, et scalabilité</li>
 		</ul>
-		<div class="next"><blockquote>Ils aûraient du tout réécrire en utilisant un vrai langage.</blockquote> Marcel Patulacci</div>
+		<div class="next"><blockquote>Ils aûraient du tout réécrire en utilisant un vrai langage, du [python|ruby|java|...]</blockquote> <span style="font-size: 0.7em">Marcel Patulacci - Brigadier chef, et agent de la paix avant tout.</span></div>
 	</div></section>
 
 	<section class="slide"><div>
 		<ul>
-			<li><strong>20 millions de lignes de PHP</strong>, soit 0,02 Facebook Unit</li>
+			<li><strong>20 millions de lignes de PHP</strong></li>
 		</ul>
-		<div class="next"><blockquote>Ils aûraient du tout réécrire en utilisant un vrai langage, mais plus tôt.</blockquote> Marcel Patulacci - Brigadier chef, et agent de la paix avant tout.</div>
+		<div class="next"><blockquote>Ils aûraient du tout réécrire en utilisant un vrai langage, du [python|ruby|java|...], mais plus tôt.</blockquote> <span style="font-size: 0.7em">Marcel Patulacci - Brigadier chef, et agent de la paix avant tout.</span></div>
 	</div></section>
 
 	<section class="slide"><div>
@@ -123,15 +128,17 @@
 
 	<section class="slide"><div>
 		<h2>Solution possible :<br />Réécrire sous forme d'extension PHP</h2>
-		<ul>
+		<ul class="yesno">
 			<li><img src="pictures/yes.png" class="check" alt="" /> Réécriture pas à pas</li>
-			<li><img src="pictures/no.png" class="check" alt="" /> Beaucoup moins de développeurs disponibles</li>
-			<li><img src="pictures/no.png" class="check" alt="" /> Obligation d'apprendre l'API Zend</li>
+			<div class="next">
+				<li><img src="pictures/no.png" class="check" alt="" /> Beaucoup moins de développeurs disponibles</li>
+				<li><img src="pictures/no.png" class="check" alt="" /> Obligation d'apprendre l'API Zend</li>
+			</div>
 		</ul>
 	</div></section>
 
 	<section class="slide cover"><div>
-		<h2>Facebook Research Center</h2>
+		<h2>Facebook Engineering</h2>
 		<img src="covers/fbresearch.jpg" alt="" />
 	</div></section>
 
@@ -141,12 +148,12 @@
 		<ul>
 			<li>À partir de 2008, Open-Source en 2010</li>
 			<li>Compilateur, ou plutôt Source Code Transformer</li>
-			<li>PHP -> C++, puis compilation g++</li>
+			<li>PHP ➔ C++, puis compilation g++</li>
 			<li>Plein d'alternatives possibles :
 				<ul>
-					<li>Quercus: PHP -> Java</li>
-					<li>PHC: PHP -> C</li>
-					<li>Phalanger : PHP -> .Net <img src="pictures/trollface.png" style="vertical-align: middle;" class="next" /></li>
+					<li>Quercus: PHP ➔ Java</li>
+					<li>PHC: PHP ➔ C</li>
+					<li>Phalanger : PHP ➔ .Net <img src="pictures/trollface.png" style="vertical-align: middle;" class="next" /></li>
 				</ul>
 			</li>
 		</ul>
@@ -164,7 +171,7 @@
 			<li>Déploiement d'un exécutable</li>
 		</ul>
 		<ul class="next">
-			<li>Pas vraiment utilisable pour nous !</li>
+			<li>Pas vraiment utilisable en dehors de Facebook !</li>
 		</ul>
 	</div></section>
 
@@ -254,15 +261,14 @@
 	<section class="slide"><div>
 		<h2>Hack !</h2>
 		<ul>
-			<li>Dispo dans HHVM</li>
-			<li>Écrit en OCaml</li>
-			<li>Fonctionne très bien en parallèle de PHP</li>
-			<li>Modes :
+			<li>Dispo dans HHVM, en parralèle de PHP</li>
+			<li>Écrit en OCaml - merci l'INRIA ;)</li>
+			<li>Modes : <code>&lt;hh // Strict</code>
 			<ul>
-				<li>Partial</li>
+				<li>Partial : Par défaut</li>
 				<li>Strict : tout doit être typé, pas d'appel à du code non-hack</li>
 				<li>Decl : code non-strict appelable</li>
-				<li>Unsafe : pas de type-checking</li>
+				<li>Unsafe : pas de type-checking jusqu'à la fin du bloc</li>
 			</ul></li>
 		</ul>
 	</div></section>
@@ -271,12 +277,12 @@
 		<h2>XHP</h2>
 		<ul>
 			<li>En fait Facebook a commencé à changer PHP bien avant !</li>
-			<li>XHP !</li>
 			<li>Extension PHP qui augmente la syntaxe du langage</li>
+			<li>Templating Engine</li>
 			<li>Exemple : </li>
-			<code>&lt;?php<br/>
-			$href = 'http://www.facebook.com';<br/>
-			echo &lt;a href={$href}&gt;Facebook&lt;/a&gt;;</code>
+			<pre><code class="language-php">&lt;?php
+$href = 'http://www.estcequecestbientotleweekend.fr';<br/>
+echo &lt;a href={$href}&gt;Facebook&lt;/a&gt;;</code></pre>
 		</ul>
 	</div></section>
 
@@ -287,6 +293,7 @@
 			<li>Type annotations</li>
 			<li>Generics</li>
 			<li>Collections</li>
+			<li>Lambda</li>
 			<li>Fonctions asynchrones</li>
 		</ul>
 	</div></section>
@@ -294,7 +301,7 @@
 	<section class="slide"><div>
 		<h2>Rappel !</h2>
 		<p>PHP est dynamiquement typé !</p>
-		<ul>
+		<ul class="yesno">
 			<li><img src="pictures/yes.png" class="check" alt="" /> Flexibilité</li>
 			<li><img src="pictures/no.png" class="check" alt="" /> Erreurs possibles</li>
 		</ul>
@@ -302,19 +309,29 @@
 
 	<section class="slide"><div>
 		<h2>Type hinting</h2>
-		<li>Daemon type-checker : sur le poste du dev, programme qui watch le code source</li>
-		<li>A la modification d'un fichier, il y a comparaison avec l'ancien fichier, et re-calcule si besoin</li>
-		<li>method by method === rapidité !</li>
-		<li>Configuration via .hhconfig</li>
-		<li>hh_client pour voir l'état</li>
+		<li>Types disponibles: <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code>, <code>MyClass</code>, <code>Vector&lt;type&gt;</code>, <code>this</code>, <code>mixed</code>, <code>void</code></li>
+		<li><code>?int</code>, <code>array</code>, <code>array&lt;int&gt;</code>, <code>array&lt;MyClass&gt;</code>, <code>array&lt;int, MyClass&gt;</code></li>
+		<li>Type nullable: <code>?type</code></li>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Type hinting</h2>
-		<li>Type de retour des fonctions / méthodes</li>
-		<li>Type nullable: <code>?type</code></li>
-		<li>Types disponibles: <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code>, <code>MyClass</code>, <code>Vector&lt;type&gt;</code>, <code>this</code>, <code>mixed</code>, <code>void</code></li>
-		<li><code>?int</code>, <code>array</code>, <code>array&lt;int&gt;</code>, <code>array&lt;MyClass&gt;</code>, <code>array&lt;int, MyClass&gt;</code></li>
+		<pre><code class="language-php">&lt;?hh
+
+protected int $position;
+
+public function getPosition(): int
+{
+    return $this->position;
+}</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Type hinting - Développement</h2>
+		<li>Daemon type-checker : sur le poste du dev, watch le code source</li>
+		<li>Re-calcule méthode par méthode == rapidité !</li>
+		<li>Configuration via .hhconfig</li>
+		<li><code>$ hh_client</code> pour voir l'état</li>
 	</div></section>
 
 	<section class="slide"><div>
@@ -339,18 +356,28 @@
 	<section class="slide"><div>
 		<h2>Lambda</h2>
 		<ul>
+			<li><code>==></code> : Syntaxe plus courte</li>
 			<li>Binding de variable automatique</li>
-			<li>Syntaxe plus courte</li>
-			<li><code>==></code></li>
+			<pre><code class="language-php">&lt;?hh
+$poney = $x ==> $x + 1;
+$foo(41); //  42
+
+$squared = array_map($x ==> $x*$x, array(1,2,3));
+var_dump($squared); // $squared is array(1,4,9)</code></pre>
 		</ul>
 	</div></section>>
 
 	<section class="slide"><div>
-		<h2>Async</h2>
+		<h2>Fonctions asynchrones</h2>
 		<ul>
 			<li>Paralléliser les tâches : cuire des pâtes, couper les tomates, ...</li>
 			<li><code>async</code> et <code>await</code> keywords</li>
-			<li>Early stage : use at your own risk!</li>
+			<li>/!\ Early stage : use at your own risk!</li>
+			<pre><code class="language-php">&lt;?hh
+$bar = await gen_bar($a);
+
+async function gen_bar(int $a): Awaitable&lt;?Bar&gt; {
+}</code></pre>
 		</ul>
 	</div></section>
 
@@ -367,16 +394,12 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 
 	<section class="slide"><div>
 		<h2>Non supportés dans Hack</h2>
-		<p><code>goto</code>, <code>if ... endif;</code>, <code>break N</code>, <code>continue N</code>, variables globales, ...</p>
+		<p>Variables globales, <code>goto</code>, <code>if ... endif;</code>, <code>break N</code>, ...</p>
 		<li>http://docs.hhvm.com/manual/en/hack.unsupported.php</li>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Exemple</h2>
-		<p>Pas de <code>?></code></p>
-		<p>On ne mélange pas HTML et Hack.</p>
-		<p>hackificator // hh_server ༼ つ ◕_◕ ༽つ</p>
-		<p>hh_server: 1/2 journée + 10Go de RAM - 10 millions de lignes de codes</p>
+		<img src="pictures/tyrion-trial.gif" style="height: 18em;" />
 	</div></section>
 
 	<section class="slide"><div>
@@ -397,8 +420,8 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 	<section class="slide"><div>
 		<h2>Migration</h2>
 		<ul>
-			<li>Lancement de hackificator</li>
-			<li>Lancement de hh_server convert</li>
+			<li>Lancement de <code>hackificator</code></li>
+			<li>Lancement de <code>hh_server convert</code></li>
 			<li>Modification du code à la main</li>
 		</ul>
 	</div></section>
@@ -434,6 +457,8 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 				<td>146</td>
 			</tr>
 		</table>
+		<p class="next">༼ つ ◕_◕ ༽つ THE POWER OF HACK ༼ つ ◕_◕ ༽つ</p>
+		<p class="note">4000 requêtes - The higher the better ;)</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -448,13 +473,14 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Hack va déchainer les développeurs ?</h2>
-		<ul class="next">
+		<h2>Mais HACK, c'est surtout...</h2>
+		<ul>
 			<li>https://wiki.php.net/rfc/returntypehinting</li>
 			<li>https://wiki.php.net/rfc/constructor-promotion</li>
 			<li>https://wiki.php.net/rfc/consistent-names</li>
 			<li>http://www.php-cpp.com/</li>
 		</ul>
+		<p>Une motivation énorme pour faire bouger les choses !</p>
 	</div></section>
 
 	<section class="slide cover" id="end"><div>
@@ -462,6 +488,7 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 			Benjamin et Mathieu<br />
 			<a href="http://jolicode.com">http://jolicode.com</a>
 		</h2>
+		<p>Viendez à l'apéro ce soir, on sera les 2 mecs bourrés, et on pourra parler de HHVM, de Hackkk, de Whiky et de tucs qi sn coo lll l!</p>
 	</div></section>
 
 	<section class="slide"><div>
