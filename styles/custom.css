@@ -42,6 +42,13 @@ img.middle {
     vertical-align: bottom;
 }
 
+.slide>div {
+    padding: 85px 100px 0;
+}
+.slide>div.progressbar {
+    padding: 105px 120px 0;
+}
+
 .slide ul.yesno li {
     text-indent: -3em;
 }
@@ -124,7 +131,7 @@ blockquote {
 
 .slide.cover, .slide.shout{ z-index: 100002 }
 
-.list .slide>div:before, .full .slide>div:before {
+.list .slide>div.progressbar:before, .full .slide>div.progressbar:before {
     background: url(../pictures/jolicode.svg) left 53% no-repeat;
     bottom: 0;
     color: #888;

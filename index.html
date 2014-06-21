@@ -159,9 +159,11 @@
 		</ul>
 	</div></section>
 
+<!--
 	<section class="slide"><div>
 		<img src="pictures/fb-hiphop-schema.png" />
 	</div></section>
+-->
 
 	<section class="slide"><div>
 		<h2>HipHop for PHP</h2>
@@ -308,22 +310,64 @@ echo &lt;a href={$href}&gt;Facebook&lt;/a&gt;;</code></pre>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Type hinting</h2>
-		<li>Types disponibles: <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code>, <code>MyClass</code>, <code>Vector&lt;type&gt;</code>, <code>this</code>, <code>mixed</code>, <code>void</code></li>
-		<li><code>?int</code>, <code>array</code>, <code>array&lt;int&gt;</code>, <code>array&lt;MyClass&gt;</code>, <code>array&lt;int, MyClass&gt;</code></li>
-		<li>Type nullable: <code>?type</code></li>
+		<div style="float: left; width: 35%;">
+			<h2>Type hinting</h2>
+			<li>Propriétés</li>
+			<li>Retour d'une fonction/méthode</li>
+			<li>Type nullable: <code>?type</code></li>
+		</div>
+		<div style="float: right; width: 65%;">
+			<pre><code class="language-php">&lt;?hh
+class Poney {
+  private int $weight;
+
+  public function __construct(int $weight) {
+    $this->weight = $weight;
+  }
+
+  public function addWeight(int $delta)
+  : Poney {
+    $this->weight += $delta;
+
+    return $this;
+  }
+
+  public function getWeight(): int {
+    return $this->weight;
+  }
+}
+</code></pre>
+		</div>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Type hinting</h2>
-		<pre><code class="language-php">&lt;?hh
+		<div style="float: left; width: 35%;">
+			<h2>Type hinting</h2>
+			<li>Propriétés</li>
+			<li>Retour d'une fonction/méthode</li>
+			<li>Type nullable: <code>?type</code></li>
+		</div>
+		<div style="float: right; width: 65%;">
+			<pre><code class="language-php">&lt;?hh
+class Poney {
+  public function __construct(
+  	private int $weight
+  ) {
+  }
 
-protected int $position;
+  public function addWeight(int $delta)
+  : Poney {
+    $this->weight += $delta;
 
-public function getPosition(): int
-{
-    return $this->position;
-}</code></pre>
+    return $this;
+  }
+
+  public function getWeight(): int {
+    return $this->weight;
+  }
+}
+</code></pre>
+		</div>
 	</div></section>
 
 	<section class="slide"><div>
@@ -335,10 +379,27 @@ public function getPosition(): int
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Generics</h2>
-		<li>Type de classe variable</li>
-		<li>Analyse statique du code</li>
-		<li><code>array&lt;int&gt;</code> != <code>array&lt;string&gt;</code></li>
+		<div style="float: left; width: 45%;">
+			<h2>Generics</h2>
+			<li>Java/C#</li>
+			<li>T remplacé par un type à l'initilisation</li>
+			<li>Analyse statique du code</li>
+		</div>
+		<div style="float: right; width: 55%;">
+			<pre><code class="language-php">&lt;?hh
+class Box&lt;T&gt; {
+  public function __construct(
+  	private T $data
+  ) {
+  }
+
+  public function getData()
+  : T {
+    return $this->data;
+  }
+}
+</code></pre>
+		</div>
 	</div></section>
 
 	<section class="slide"><div>
@@ -368,28 +429,31 @@ var_dump($squared); // $squared is array(1,4,9)</code></pre>
 	</div></section>>
 
 	<section class="slide"><div>
-		<h2>Fonctions asynchrones</h2>
-		<ul>
-			<li>Paralléliser les tâches : cuire des pâtes, couper les tomates, ...</li>
-			<li><code>async</code> et <code>await</code> keywords</li>
-			<li>/!\ Early stage : use at your own risk!</li>
+		<div style="float: left; width: 45%;">
+			<h2>Fonctions asynchrones</h2>
+			<ul>
+				<li>Paralléliser les tâches : <br>cuire des pâtes, couper les tomates, ...</li>
+				<li><code>async</code> et <code>await</code> keywords</li>
+				<li>/!\ Early stage : use at your own risk!</li>
+			</ul>
+		</div>
+
+		<div style="float: right; width: 55%;">
 			<pre><code class="language-php">&lt;?hh
-$bar = await gen_bar($a);
-
-async function gen_bar(int $a): Awaitable&lt;?Bar&gt; {
-}</code></pre>
-		</ul>
-	</div></section>
-
-	<section class="slide"><div>
-		<li>Exemple</li>
-		<pre><code class="language-php">&lt;?hh
-
-function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
-  // Example of lambda expressions.
-  return $v->map($x ==> $x + 1);
+async function getPage($url) {
+  $fp = fopen($url, 'r');
+  await $fp;
+  return stream_get_contents($fp);
 }
+
+$pages = away [
+  getPage('http://www.jolicode.com'),
+  getPage('http://www.perdu.com'),
+  getPage('http://www.mangercoder.fr')
+];
+
 </code></pre>
+		</div>
 	</div></section>
 
 	<section class="slide"><div>
@@ -442,14 +506,14 @@ function vector_add1(Vector&lt;int&gt; $v): Vector&lt;int&gt; {
 				<th scope="col">HHVM</th>
 				<th scope="col">HHVM + Hack</th>
 			</tr>
-			<tr class="next">
+			<tr>
 				<th scope="row">Concurrence = 1</th>
 				<td>8</td>
 				<td>20</td>
 				<td>23</td>
 				<td>26</td>
 			</tr>
-			<tr class="next">
+			<tr>
 				<th scope="row">Concurrence = 100</th>
 				<td>35</td>
 				<td>70</td>
