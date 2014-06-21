@@ -45,7 +45,8 @@ img.middle {
 .slide>div {
     padding: 85px 100px 0;
 }
-.slide>div.progressbar {
+
+.slide>div.progressbar, .cover>div {
     padding: 105px 120px 0;
 }
 
