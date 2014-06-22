@@ -145,7 +145,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>HipHop for PHP</h2>
+		<h2>HipHop for PHP (aka HPHPc)</h2>
 		<img src="pictures/fb-hiphop.jpg" alt="" style="float: right;" />
 		<ul>
 			<li>À partir de 2008, Open-Source en 2010</li>
@@ -168,13 +168,14 @@
 -->
 
 	<section class="slide"><div>
-		<h2>HipHop for PHP</h2>
+		<h2>HipHop for PHP (aka HPHPc)</h2>
 		<ul>
 			<li>90% du site était en HipHop</li>
 			<li>Jusqu'à 50% de CPU Usage en moins</li>
 			<li>Déploiement d'un exécutable</li>
 		</ul>
 		<ul class="next">
+			<li>Compatible avec PHP 5.2 seulement</li>
 			<li>Pas vraiment utilisable en dehors de Facebook !</li>
 		</ul>
 	</div></section>
@@ -187,18 +188,84 @@
 	<section class="slide"><div>
 		<h2>HipHop Virtual Machine</h2>
 		<ul>
+			<li>Évolution de HPHPc</li>
 			<li>Création par une équipe de 3 personnes</li>
-			<li>En quelques mois, meilleurs perfs que HipHop</li>
-			<li>Et maintenant, encore plus performant !</li>
+			<li>Plus rapide mais compatible</li>
+			<li>Nouveau language : Hack</li>
 		</ul>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>HHVM</h2>
+		<h2>HipHop Virtual Machine</h2>
 		<ul>
-			<li>CLI + FastCGI</li>
-			<li>64bits</li>
-			<li>Code machine caché en sqlite</li>
+			<li>Début de HHVM en 2010 (quand HPHPc est rendu public)</li>
+			<li>Meilleures performance que HPHPc en 2012</li>
+			<li>Et de plus en plus performant !</li>
+			<li>(facebook.com 100% HHVM since 2013)</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Sans Machine Virtuelle (HPHPc)</h2>
+		<ul>
+            <li>PHP -> AST -> C++ -> Code machine</li>
+            <li>Language dynamique transformé en code statique</li>
+		</ul>
+	</div></section>
+
+    <section class="slide"><div>
+        <h2>Avec Machine Virtuelle (HHVM)</h2>
+        <ul>
+            <li>PHP -> AST -> HHBC -> Bytecode executé</li>
+            <li>Code exécuté dans un environement dynamique (VM)</li>
+            <li>Similaire à CLR pour C# ou la JVM de Java</li>
+            <li>Les "hot path" sont compilés en code machine just-in-time</li>
+            <li>Code machine caché en sqlite</li>
+        </ul>
+    </div></section>
+
+	<section class="slide"><div>
+		<h2>HipHop Virtual Machine</h2>
+		<ul>
+			<li>CLI</li>
+            <li>Fast-CGI (drop-in replacement PHP-FPM)</li>
+			<li>LOGO PHP-FPM vs HHVM</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Les performances</h2>
+		<ul>
+			<li>En moyenne 2x plus rapide</li>
+			<li>9x plus rapide avec facebook.com (PHP 5.2 + APC...)</li>
+			<li>Sur JoliBlur 15% de performance en plus</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Just-in-Time ?</h2>
+		<pre>
+Lex./Parser --> Compilation --> OpCode PHP --> APC/OpCache
+                   |                              |
+              OpCode HHBC                         |
+                   |                              |
+              JIT Compiler                        |
+                   |                              |
+              x64 Code                            |
+                   |                              |
+              Code Repo. ------------------> Execution
+        </pre>
+		<ul>
+			<li>MOAR POWAA ?</li>
+			<li>x64 only</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>HHVM</h2>
+        <ul>
+            <li>CLI + FastCGI</li>
+            <li>64bits</li>
 			<li>JIT</li>
 			<li>Explication JIT</li>
 		</ul>
@@ -214,23 +281,65 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>Compatibilité</h2>
 		<ul>
-			<li>Compatibilité : Laravel, Twig, Drupal, ...</li>
+			<li>27+ frameworks à 100%</li>
+			<li>assetic
+codeigniter
+composer
+doctrine2
+drupal
+facebookphpsdk
+fastroute
+guzzle
+hhvmquickinterp
+idiorm
+jshrink
+json_schema
+laravel
+lessphp
+mediawiki
+mockery
+monolog
+mustache
+paris
+phpbb3
+phpmyadmin
+phpunit
+ratchet
+reactphp
+slim
+stash
+twig</li>
+			<li>Symfony2 à 98,88% et beaucoup d'autres</li>
+			<li><a href="http://www.hhvm.com/frameworks/">http://www.hhvm.com/frameworks/</a></li>
+		</ul>
+	</div></section>
+
+		<section class="slide"><div>
+		<h2>Compatibilité</h2>
+		<ul>
+            <li>Sur JoliBlur, Doctrine ORM 2.4 -> 2.5-dev</li>
+			<li></li>
 		</ul>
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>Extensions HHVM</h2>
 		<ul>
 			<li>Extensions dynamiques - comme PHP</li>
 			<li>Peuvent être écrite en PHP, Hack ou C++, et même en combinant des langages</li>
+			<li>Faciles et intuitives à écrire PHP-CPP like</li>
+			<li>TODO Exemples</li>
 		</ul>
 	</div></section>
 
 	<section class="slide"><div>
 		<ul>
 			<li>Linux: repo Debian, Ubuntu, Fedora...</li>
-			<li>MacOSX : Homebrew</li>
-			<li>Windows: AHAH.</li>
+			<li>MacOSX : <code>brew tap mcuadros/hhvm</code> mais pas très à jour</li>
+			<li>Windows : AHAH.</li>
+			<li>Vagrant : meilleur option pour OSX et Windows</li>
 		</ul>
 	</div></section>
 
