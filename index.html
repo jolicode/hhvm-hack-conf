@@ -264,7 +264,7 @@
 
 	<section class="slide"><div>
 		<h2>Just-in-Time ?</h2>
-		<pre>
+		<pre><code>
 Lex./Parser --> Compilation --> OpCode PHP --> APC/OpCache
                    |                              |
               OpCode HHBC                         |
@@ -274,7 +274,7 @@ Lex./Parser --> Compilation --> OpCode PHP --> APC/OpCache
               x64 Code                            |
                    |                              |
               Code Repo. ------------------> Execution
-        </pre>
+        </code></pre>
 		<ul>
 			<li>MOAR POWAA ?</li>
 			<li>x64 only</li>
@@ -388,7 +388,7 @@ twig</li>
 		<ul>
 			<li>Dispo dans HHVM, en parallèle de PHP</li>
 			<li>Écrit en OCaml - merci l'INRIA ;)</li>
-			<li>Modes : <code>&lt;hh // Strict</code>
+			<li>Modes : <code>&lt;?hh // Strict</code>
 			<ul>
 				<li>Partial : Par défaut</li>
 				<li>Strict : tout doit être typé, pas d'appel à du code non-hack</li>
@@ -418,7 +418,7 @@ echo &lt;a href={$href}&gt;Facebook&lt;/a&gt;;</code></pre>
 			<li>Type annotations</li>
 			<li>Generics</li>
 			<li>Collections</li>
-			<li>Lambda</li>
+			<li>Fonctions anonymes</li>
 			<li>Fonctions asynchrones</li>
 		</ul>
 	</div></section>
@@ -510,7 +510,7 @@ class Poney {
 		</div>
 		<div style="float: right; width: 55%;">
 			<pre><code class="language-php">&lt;?hh
-class Box&lt;T&gt; {
+class List&lt;T&gt; {
   public function __construct(
   	private T $data
   ) {
@@ -522,9 +522,9 @@ class Box&lt;T&gt; {
   }
 }
 
-$maBoxInt = new Box(3);
-$maBoxString = new Box("Hi");
-$maBoxArray = new Box(array());
+$maListInt = new List(3);
+$maListString = new List("Hi");
+$maListArray = new List(array());
 </code></pre>
 		</div>
 	</div></section>
@@ -542,10 +542,10 @@ $maBoxArray = new Box(array());
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Lambda</h2>
+		<h2>Fonctions anonymes</h2>
 		<ul>
 			<li><code>==></code> : Syntaxe plus courte</li>
-			<li>Binding de variable automatique</li>
+			<li>Binding de variables automatique</li>
 			<pre><code class="language-php">&lt;?hh
 $poney = $x ==> $x + 1;
 $foo(41); //  42
@@ -590,16 +590,16 @@ $pages = away [
 	</div></section>
 
 	<section class="slide"><div>
-		<img src="pictures/tyrion-trial.gif" style="height: 18em;" />
-	</div></section>
-
-	<section class="slide"><div>
 		<h2>Migration de JoliBlur</h2>
 		<ul>
 			<li>Lancement de <code>hackificator</code></li>
 			<li>Lancement de <code>hh_server convert</code></li>
 			<li>Modification du code à la main</li>
 		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/tyrion-trial.gif" style="height: 18em;" />
 	</div></section>
 
 	<section class="slide"><div>
