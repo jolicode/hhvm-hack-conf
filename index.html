@@ -41,6 +41,23 @@
 
 	<section class="slide"><div>
 		<h2>Parlons de ... </h2>
+		<div class="next">
+			<img src="pictures/blur.jpg" style="height: 11em;" />
+			<img src="pictures/blur-4players.jpg" style="height: 11em;" />
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>JoliBlur</h2>
+		<ul>
+			<li>Silex + Doctrine2</li>
+			<li>MySQL</li>
+			<li>Très simple, codé à la va-vite</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Parlons de ... </h2>
 		<img src="pictures/php-logo.jpeg" alt="" class="place" />
 	</div></section>
 
@@ -111,21 +128,26 @@
 		<h2>Les problèmes commencent...</h2>
 		<ul>
 			<li><strong>400 milliards de pages vues par mois</strong> propulsées par PHP</li>
-			<li>Autrement dit : Problèmes de performances, et scalabilité</li>
+			<li>Autrement dit : Problèmes de performances et scalabilité</li>
 		</ul>
-		<div class="next"><blockquote>Ils aûraient du tout réécrire en utilisant un vrai langage, du [python|ruby|java|...]</blockquote> <span style="font-size: 0.7em">Marcel Patulacci - Brigadier chef, et agent de la paix avant tout.</span></div>
+		<div class="next"><blockquote>Ils auraient dû tout réécrire en utilisant un vrai langage, du [python|ruby|java|...]</blockquote> <span style="font-size: 0.7em">Marcel Patulacci - Brigadier chef, et agent de la paix avant tout.</span></div>
 	</div></section>
 
 	<section class="slide"><div>
 		<ul>
 			<li><strong>60 millions de lignes de PHP</strong></li>
 		</ul>
-		<div class="next"><blockquote>Ils aûraient du tout réécrire en utilisant un vrai langage, du [python|ruby|java|...], mais plus tôt.</blockquote> <span style="font-size: 0.7em">Marcel Patulacci - Brigadier chef, et agent de la paix avant tout.</span></div>
+		<div class="next"><blockquote>Ils auraient dû tout réécrire en utilisant un vrai langage, du [python|ruby|java|...], mais plus tôt.</blockquote> <span style="font-size: 0.7em">Marcel Patulacci - Brigadier chef, et agent de la paix avant tout.</span></div>
 	</div></section>
 
 	<section class="slide"><div>
 		<blockquote>Languages don't scale. Architecture does.</blockquote>
 		<p>Abraham Lincoln</p>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<h2>Facebook Engineering</h2>
+		<img src="covers/fbresearch.jpg" alt="" />
 	</div></section>
 
 	<section class="slide"><div>
@@ -139,23 +161,18 @@
 		</ul>
 	</div></section>
 
-	<section class="slide cover"><div>
-		<h2>Facebook Engineering</h2>
-		<img src="covers/fbresearch.jpg" alt="" />
-	</div></section>
-
 	<section class="slide"><div>
 		<h2>HipHop for PHP (aka HPHPc)</h2>
 		<img src="pictures/fb-hiphop.jpg" alt="" style="float: right;" />
 		<ul>
-			<li>À partir de 2008, Open-Source en 2010</li>
+			<li>À partir de 2008, open source en 2010</li>
 			<li>Compilateur, ou plutôt Source Code Transformer</li>
 			<li>PHP ➔ C++, puis compilation g++</li>
 			<li>Plein d'alternatives possibles :
 				<ul>
 					<li>Quercus: PHP ➔ Java</li>
 					<li>PHC: PHP ➔ C</li>
-					<li>Phalanger : PHP ➔ .Net <img src="pictures/trollface.png" style="vertical-align: middle;" class="next" /></li>
+					<li>Phalanger : PHP ➔ .Net <img src="pictures/trollface.png" style="vertical-align: middle;" /></li>
 				</ul>
 			</li>
 		</ul>
@@ -350,15 +367,6 @@ twig</li>
 	</div></section>
 
 	<section class="slide cover"><div>
-		<h2>Les alternatives</h2>
-	</div></section>
-
-	<section class="slide"><div>
-		<li>Zephir</li>
-		<li>PHP NG</li>
-	</div></section>
-
-	<section class="slide cover"><div>
 		<h2>Hack</h2>
 	</div></section>
 
@@ -375,7 +383,7 @@ twig</li>
 	<section class="slide"><div>
 		<h2>Hack !</h2>
 		<ul>
-			<li>Dispo dans HHVM, en parralèle de PHP</li>
+			<li>Dispo dans HHVM, en parallèle de PHP</li>
 			<li>Écrit en OCaml - merci l'INRIA ;)</li>
 			<li>Modes : <code>&lt;hh // Strict</code>
 			<ul>
@@ -483,9 +491,9 @@ class Poney {
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Type hinting - Développement</h2>
+		<h2>Type Checker</h2>
 		<li>Daemon type-checker : sur le poste du dev, watch le code source</li>
-		<li>Re-calcule méthode par méthode == rapidité !</li>
+		<li>Recalcule méthode par méthode == rapidité !</li>
 		<li>Configuration via .hhconfig</li>
 		<li><code>$ hh_client</code> pour voir l'état</li>
 	</div></section>
@@ -494,7 +502,7 @@ class Poney {
 		<div style="float: left; width: 45%;">
 			<h2>Generics</h2>
 			<li>Java/C#</li>
-			<li>T remplacé par un type à l'initilisation</li>
+			<li>T remplacé par un type à l'initialisation</li>
 			<li>Analyse statique du code</li>
 		</div>
 		<div style="float: right; width: 55%;">
@@ -520,13 +528,13 @@ $maBoxArray = new Box(array());
 
 	<section class="slide"><div>
 		<h2>Collections</h2>
-		<li>Vector : Liste ordonnée de valeur du même type</li>
+		<li>Vector : Liste ordonnée de valeurs du même type</li>
 		<code>$vector = Vector{'pony', 'unicorn'};</code>
 		<li>Map : Valeurs de même type, clés = string ou int</li>
 		<code>$map = Map{'pony' => 5, 'unicorn' = 42};</code>
 		<li>Set : Liste d'int ou string</li>
 		<code>$set = Set{'pony', 'unicorn'};</code>
-		<li>Pair : Pair de valuer de n'importe quel type, immutable</li>
+		<li>Pair : Paire de valeur de n'importe quel type, immutable</li>
 		<code>$pair = Pair{'jolicode', 42};</code>
 	</div></section>
 
@@ -583,19 +591,7 @@ $pages = away [
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Blur</h2>
-		<img src="pictures/blur.jpg" style="height: 11em;" />
-		<img src="pictures/blur-4players.jpg" style="height: 11em;" />
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>JoliBlur</h2>
-		<ul>
-			<li>Silex + Doctrine2</li>
-			<li>MySQL</li>
-			<li>Très simple, coder à la va-vite</li>
-		</ul>
-		<h3>Migration</h3>
+		<h2>Migration de JoliBlur</h2>
 		<ul>
 			<li>Lancement de <code>hackificator</code></li>
 			<li>Lancement de <code>hh_server convert</code></li>
@@ -655,9 +651,10 @@ $pages = away [
 			<li>https://wiki.php.net/rfc/returntypehinting</li>
 			<li>https://wiki.php.net/rfc/constructor-promotion</li>
 			<li>https://wiki.php.net/rfc/consistent-names</li>
+			<li>https://wiki.php.net/phpng</li>
 			<li>http://www.php-cpp.com/</li>
 		</ul>
-		<p>Une motivation énorme pour faire bouger les choses !</p>
+		<p>... une motivation énorme pour faire bouger les choses !</p>
 	</div></section>
 
 	<section class="slide cover" id="end"><div>
