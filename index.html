@@ -172,7 +172,6 @@
 		<ul>
 			<li>À partir de 2008, open source en 2010</li>
 			<li>Compilateur, ou plutôt Source Code Transformer</li>
-			<li>PHP ➔ C++, puis compilation g++</li>
 			<li>Plein d'alternatives possibles :
 				<ul>
 					<li>Quercus: PHP ➔ Java</li>
@@ -183,11 +182,20 @@
 		</ul>
 	</div></section>
 
-<!--
-	<section class="slide"><div>
+    <section class="slide"><div>
+        <h2>HipHop for PHP (aka HPHPc)</h2>
+        <img src="pictures/hphpc_compilation.png">
+        <ul>
+			<li>C++ compilé avec g++</li>
+            <li>Language dynamique transformé en code statique</li>
+            <li>Inférence des types obligatoire</li>
+        </ul>
+    </div></section>
+
+    <!-- <section class="slide"><div>
 		<img src="pictures/fb-hiphop-schema.png" />
-	</div></section>
--->
+	</div></section> -->
+
 
 	<section class="slide"><div>
 		<h2>HipHop for PHP (aka HPHPc)</h2>
@@ -213,7 +221,7 @@
 		<ul>
 			<li>Évolution de HPHPc</li>
 			<li>Création par une équipe de 3 personnes</li>
-			<li>Plus rapide mais compatible</li>
+			<li>Plus <em>rapide</em> mais <em>compatible</em></li>
 			<li>Nouveau language : Hack</li>
 		</ul>
 	</div></section>
@@ -224,75 +232,68 @@
 			<li>Début de HHVM en 2010 (quand HPHPc est rendu public)</li>
 			<li>Meilleures performance que HPHPc en 2012</li>
 			<li>Et de plus en plus performant !</li>
-			<li>(facebook.com 100% HHVM since 2013)</li>
+			<li>(facebook.com 100% HHVM depuis 2013)</li>
 		</ul>
 	</div></section>
 
-	<section class="slide"><div>
-		<h2>Sans Machine Virtuelle (HPHPc)</h2>
-		<ul>
-            <li>PHP -> AST -> C++ -> Code machine</li>
-            <li>Language dynamique transformé en code statique</li>
-		</ul>
-	</div></section>
+    <section class="slide"><div>
+        <h2>HipHop Virtual Machine</h2>
+        <ul>
+            <li>CLI + Fast-CGI</li>
+            <li>Fast-CGI drop-in replacement de PHP-FPM</li>
+            <li>LOGO PHP-FPM vs HHVM</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Sans Machine Virtuelle (HPHPc)</h2>
+        <img src="pictures/hphpc_compilation.png">
+    </div></section>
 
     <section class="slide"><div>
         <h2>Avec Machine Virtuelle (HHVM)</h2>
+        <img src="pictures/hhvm_interpreted.png">
         <ul>
-            <li>PHP -> AST -> HHBC -> Bytecode executé</li>
             <li>Code exécuté dans un environement dynamique (VM)</li>
             <li>Similaire à CLR pour C# ou la JVM de Java</li>
             <li>Les "hot path" sont compilés en code machine just-in-time</li>
-            <li>Code machine caché en sqlite</li>
-        </ul>
-    </div></section>
-
-	<section class="slide"><div>
-		<h2>HipHop Virtual Machine</h2>
-		<ul>
-			<li>CLI</li>
-            <li>Fast-CGI (drop-in replacement PHP-FPM)</li>
-			<li>LOGO PHP-FPM vs HHVM</li>
-		</ul>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Les performances</h2>
-		<ul>
-			<li>En moyenne 2x plus rapide</li>
-			<li>9x plus rapide avec facebook.com (PHP 5.2 + APC...)</li>
-			<li>Sur JoliBlur 15% de performance en plus</li>
-		</ul>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Just-in-Time ?</h2>
-		<pre><code>
-Lex./Parser --> Compilation --> OpCode PHP --> APC/OpCache
-                   |                              |
-              OpCode HHBC                         |
-                   |                              |
-              JIT Compiler                        |
-                   |                              |
-              x64 Code                            |
-                   |                              |
-              Code Repo. ------------------> Execution
-        </code></pre>
-		<ul>
-			<li>MOAR POWAA ?</li>
-			<li>x64 only</li>
+            <li>HHBC mis en cache dans SQLite (APC/OpCache like)</li>
         </ul>
     </div></section>
 
     <section class="slide"><div>
-        <h2>HHVM</h2>
+        <h2>Just-in-Time (JIT) ?</h2>
         <ul>
-            <li>CLI + FastCGI</li>
-            <li>64bits</li>
-			<li>JIT</li>
-			<li>Explication JIT</li>
-		</ul>
-	</div></section>
+            <li>Compilation des "points chauds" à la volée</li>
+            <li>Le code compilé est rapide</li>
+            <li>MOAR POWAA !</li>
+        </ul>
+        <ul class="next">
+            <li>Pas forcément, la compilation JIT est coûteuse</li>
+            <li><small>Compilation x64 uniquement</small></li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Benchmarks</h2>
+        <ul>
+            <li>En moyenne 2x plus rapide</li>
+            <li>9x plus rapide avec facebook.com (PHP 5.2 + APC...)</li>
+            <li>Sur JoliBlur 15% de performance en plus</li>
+        </ul>
+    </div></section>
+
+
+    <section class="slide"><div>
+        <h2>Benchmarks</h2>
+        <ul>
+            <li>Premières requests servent à chauffer la bête !</li>
+            <li>http://stackoverflow.com/questions/17898783/hhvm-poor-performance</li>
+            <li>Code compilé au bout de 11 passages</li>
+            <li>(HHBC interprété par la VM au début)</li>
+        </ul>
+    </div></section>
+
 
 	<section class="slide"><div>
 		<h2>HHVM</h2>
@@ -365,11 +366,6 @@ twig</li>
 			<li>Windows : AHAH.</li>
 			<li>Vagrant : meilleur option pour OSX et Windows</li>
 		</ul>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Benchmarks</h2>
-		<li>Premières requests servent à chauffer la bête ! - http://stackoverflow.com/questions/17898783/hhvm-poor-performance</li>
 	</div></section>
 
 	<section class="slide cover"><div>
