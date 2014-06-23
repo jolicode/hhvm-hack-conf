@@ -100,14 +100,12 @@
 		<h2>Vous vous souvenez d'Internet Explorer ?</h2>
 		<img src="pictures/ie3.jpg" width="50%" /><img src="pictures/ie55.jpg" width="50%" />
 	</div></section>
+-->
 
 	<section class="slide"><div>
 	<br />
 		<img src="pictures/php-logo.jpeg" alt="" width="45%" class="middle" /><span class="biggest">&nbsp;==&nbsp;</span><img src="pictures/ie.jpg" width="35%" alt="" class="middle" style="margin-bottom: 35px" />
-
-		<p class="note">Bien mieux que Safari ;)</p>
 	</div></section>
--->
 
 	<section class="slide"><div>
 		<li>Parfait pour un projet rapide, fait le soir dans une chambre d'étudiant.</li>
@@ -516,9 +514,14 @@ class List&lt;T&gt; {
   ) {
   }
 
-  public function getData()
-  : T {
-    return $this->data;
+  public function insert(T $data)
+  : void {
+  	// Stuff
+  }
+
+  public function count()
+  : int {
+  	// Stuff
   }
 }
 
@@ -548,7 +551,7 @@ $maListArray = new List(array());
 			<li>Binding de variables automatique</li>
 			<pre><code class="language-php">&lt;?hh
 $poney = $x ==> $x + 1;
-$foo(41); //  42
+$poney(41); // 42
 
 $squared = array_map($x ==> $x*$x, array(1,2,3));
 var_dump($squared); // $squared is array(1,4,9)</code></pre>
@@ -573,7 +576,7 @@ async function getPage($url) {
   return stream_get_contents($fp);
 }
 
-$pages = away [
+$pages = await [
   getPage('http://www.jolicode.com'),
   getPage('http://www.perdu.com'),
   getPage('http://www.mangercoder.fr')
