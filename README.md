@@ -1,5 +1,7 @@
 # HHVM et "Hack", prenez 2 versions d'avance sur PHP
 
+http://jolicode.github.io/hhvm-hack-conf/
+
 
 ## Generating a PDF
 
